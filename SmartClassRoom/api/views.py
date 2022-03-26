@@ -29,6 +29,7 @@ class ClassroomViewSet(viewsets.ModelViewSet):
     """
     queryset = Classroom.objects.all()
     serializer_class = ClassroomSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class MeasurementStationViewSet(viewsets.ModelViewSet):
@@ -55,3 +56,4 @@ class ConnectionHistoryViewSet(viewsets.ModelViewSet):
     """
     queryset = ConnectionHistory.objects.all()
     serializer_class = ConnectionHistorySerializer
+    permission_classes = [permissions.IsAuthenticated]
