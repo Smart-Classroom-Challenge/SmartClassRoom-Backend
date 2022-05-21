@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include, path
 from rest_framework import routers
+from api.schema import schema
+from graphene_django.views import GraphQLView
 from api import views
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -50,4 +52,5 @@ urlpatterns = [
         'api/token/refresh/',
         TokenRefreshView.as_view(),
         name='token_refresh'),
+    path("graphql", GraphQLView.as_view(graphiql=True, schema=schema)),
 ]
