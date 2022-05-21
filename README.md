@@ -55,6 +55,11 @@ http://127.0.0.1:8000/admin/
 
 
 ## Graphql:
+
+QueryExecuter:
+`http://baseUrl:Port/graphql`
+
+
 Sample Query: 
 ```
 {
