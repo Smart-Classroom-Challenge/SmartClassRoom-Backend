@@ -940,12 +940,11 @@ class Measurement_Update(SmartClassroomTestCase):
             f'/api/Measurements/{Measurement_1.id}/',
             {'id': 1, 'fk_measurement_station': MeasurementStation_1.id,
              'time': '2020-01-01T00:00:00+01:00', 'insert_time': '2020-01-01T00:00:00+01:00', 'co2': 1800,
-             'temperature': 21, 'humidity': 33, 'motion': True, 'light': 40000}
-            , format='json')
+             'temperature': 21, 'humidity': 33, 'motion': True, 'light': 40000}, format='json')
         print(response.status_code, response.status_text, response.reason_phrase)
         self.assertEquals(response.status_code, status.HTTP_200_OK)
         self.assertEquals(response.data['co2'], '1800.0000000000')
-        
+
     def test_put_invalid_measurement(self):
         MeasurementStation_1 = MeasurementStation.objects.get(
             name="Measurement Station 2")
@@ -953,8 +952,7 @@ class Measurement_Update(SmartClassroomTestCase):
             f'/api/Measurements/999999/',
             {'id': 99999, 'fk_measurement_station': MeasurementStation_1.id,
              'time': '2020-01-01T00:00:00+01:00', 'insert_time': '2020-01-01T00:00:00+01:00', 'co2': 1800,
-             'temperature': 21, 'humidity': 33, 'motion': True, 'light': 40000}
-            , format='json')
+             'temperature': 21, 'humidity': 33, 'motion': True, 'light': 40000}, format='json')
         print(response.status_code, response.status_text, response.reason_phrase)
         self.assertEquals(response.status_code, status.HTTP_404_NOT_FOUND)
 
