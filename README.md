@@ -56,8 +56,6 @@ http://127.0.0.1:8000/admin/
 
 ## Graphql:
 Sample Query: 
-
-
 ```
 {
   classrooms{name, description, roomNumber, id, updatedOn},
