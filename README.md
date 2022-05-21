@@ -53,4 +53,20 @@ http://127.0.0.1:8000/admin/
 1. `python manage.py makemigrations`
 2. `python manage.py migrate`
 
+
+## Graphql:
+Sample Query: 
+
+
+```
+{
+  classrooms{name, description, roomNumber, id, updatedOn},
+  measurementStation{id, fkClassroom {
+    id
+  }, active}
+}
+```
+
+
+
 Made with ❤️ and  🥥
