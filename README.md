@@ -72,4 +72,4 @@ Sample Query:
 
 
 
-Made with ❤️ and  🥥
+Made with ❤️ and  👠
